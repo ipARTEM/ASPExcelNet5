@@ -218,7 +218,12 @@ caption {
 }
 
 th {
-  text-align: inherit;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: inherit;
+}
+tr:hover {
+    background-color: #E8F3F9;
 }
 
 label {
@@ -1517,7 +1522,12 @@ pre code {
   color: #212529;
 }
 
-.table th,
+    .table th {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+        font-size: 1.2em;
+    }
 .table td {
   padding: 0.75rem;
   vertical-align: top;
@@ -10013,11 +10023,17 @@ a.text-dark:hover, a.text-dark:focus {
   .table {
     border-collapse: collapse !important;
   }
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-  .table-bordered th,
+    .table td {
+        background-color: #fff !important;
+    }
+    .table th {
+        font-size: 1.2em;
+        background-color: #fff !important;
+    }
+    .table-bordered th {
+        font-size: 1.2em;
+        border: 1px solid #dee2e6 !important;
+    }
   .table-bordered td {
     border: 1px solid #dee2e6 !important;
   }
@@ -10033,6 +10049,12 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
+  }
+  
+  
+  
+  table td:hover {
+        background-color: #c3f8d3;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

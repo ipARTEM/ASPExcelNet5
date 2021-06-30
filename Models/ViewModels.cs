@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace ASPExcelNet5.Models
 {
-    public class PriceViewModel
+    public class ListExcelsViewModel
     {
-        public PriceViewModel()
+        public ListExcelsViewModel()
         {
-            PhoneBrands = new List<PhoneBrand>();
+            ListExcels = new List<ListExcel>();
         }
 
-        public List<PhoneBrand> PhoneBrands { get; set; }
+        public List<ListExcel> ListExcels { get; set; }
 
         //кол-во ошибок при импорте
         public int ErrorsTotal { get; set; }

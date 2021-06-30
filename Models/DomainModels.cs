@@ -5,38 +5,38 @@ using System.Threading.Tasks;
 
 namespace ASPExcelNet5.Models
 {
-    public class PricePosition
+    public class CellPosition
     {
-        //Неисправность
-        public string Problem { get; set; }
+        
+        public string FirstName { get; set; }
 
-        //Стоимость ремонта
-        public string Price { get; set; }
+       
+        public string Cell { get; set; }
     }
 
-    public class PhoneModel
+    public class ColumnName
     {
-        public PhoneModel()
+        public ColumnName()
         {
-            PricePositions = new List<PricePosition>();
+            ColumnPositions = new List<CellPosition>();
         }
 
-        //Название модели телефона
+        
         public string Title { get; set; }
 
-        public List<PricePosition> PricePositions { get; set; }
+        public List<CellPosition> ColumnPositions { get; set; }
     }
 
-    public class PhoneBrand
+    public class ListExcel
     {
-        public PhoneBrand()
+        public ListExcel()
         {
-            PhoneModels = new List<PhoneModel>();
+            CollectionOfSheets = new List<ColumnName>();
         }
 
-        //Название бренда
+        //Название листа
         public string Title { get; set; }
 
-        public List<PhoneModel> PhoneModels { get; set; }
+        public List<ColumnName> CollectionOfSheets { get; set; }
     }
 }
