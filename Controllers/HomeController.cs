@@ -55,14 +55,14 @@ namespace ASPExcelNet5.Controllers
                         foreach (IXLColumn column in worksheet.ColumnsUsed())
                         {
                             ColumnName withoutFirstColumn = new ColumnName();
-                            //withoutFirstColumn.Title = column.Cell(1).Value.ToString();
+                            withoutFirstColumn.Title = column.Cell(1).Value.ToString();
 
-                            foreach (IXLRow row in worksheet.RowsUsed())
+                            foreach (IXLRow row in worksheet.RowsUsed().Skip(1))
                             {
                                 try
                                 {
                                     CellPosition firstColumn = new CellPosition();
-                                    //firstColumn.FirstName = row.Cell(1).Value.ToString();
+                                    firstColumn.FirstName = row.Cell(1).Value.ToString();
                                     firstColumn.Cell = row.Cell(column.ColumnNumber()).Value.ToString();
                                     withoutFirstColumn.ColumnPositions.Add(firstColumn);
 

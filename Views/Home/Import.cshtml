@@ -17,22 +17,23 @@
             </h3>
             <table class="table">
                 <thead >
-                    <tr>
-
+                    <tr class=" table-primary">
                         
-                        @*@foreach (ColumnName oneRow in oneList.CollectionOfSheets)
+                        @*<th></th>*@
+                        
+                        @foreach (ColumnName oneRow in oneList.CollectionOfSheets)
                         {
                             <th>@oneRow.Title</th>
-                        }*@
+                        }
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (CellPosition cells in oneList.CollectionOfSheets[0].ColumnPositions)
                     {
                         <tr>
-                            <th >
+                            @*<th class=" table-primary" >
                                 @cells.FirstName
-                            </th>
+                            </th>*@
                             @foreach (ColumnName oneRow in oneList.CollectionOfSheets)
                             {
                                 <td>@oneRow.ColumnPositions[positionsCounter].Cell</td>
