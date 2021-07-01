@@ -6,16 +6,16 @@
 
 <h2>Таблицы из Excel</h2>
 
-<div>
+<div class="pb-0" >
     @($"Ошибок при импорте: {Model.ErrorsTotal}")
-    <div>
+    <div >
         @foreach (ListExcel oneList in Model.ListExcels)
         {
             int positionsCounter = 0;
             <h3>
                 Лист: @oneList.Title
             </h3>
-            <table class="table">
+            <table class="table ">
                 <thead >
                     <tr class=" table-primary">
                         
