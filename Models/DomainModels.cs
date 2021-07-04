@@ -35,6 +35,9 @@ namespace ASPExcelNet5.Models
 
     public class ListExcel
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+
         public ListExcel()
         {
             CollectionOfSheets = new List<ColumnName>();

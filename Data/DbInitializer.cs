@@ -71,6 +71,20 @@ namespace ASPExcelNet5.Data
                 context.Enrollments.Add(e);
             }
             context.SaveChanges();
+
+            var columnName = new ColumnName[]
+            {
+                new ColumnName { Title="Excel 1"},
+                new ColumnName { Title="Excel 2"},
+
+            };
+            //foreach (ColumnName exl in columnName)
+            //{
+            //    context.ColumnNames.Add(exl);
+            //}
+            //context.SaveChanges();
+
+
         }
     }
 }

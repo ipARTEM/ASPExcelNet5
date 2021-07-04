@@ -17,7 +17,7 @@ namespace ASPExcelNet5.Data
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Student> Students { get; set; }
 
-        public DbSet<ColumnName> ColumnNames { get; set; }
+        //public DbSet<ColumnName> ColumnNames { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,7 +25,7 @@ namespace ASPExcelNet5.Data
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Student>().ToTable("Student");
 
-            modelBuilder.Entity<ColumnName>().ToTable("TableExcel");
+            //modelBuilder.Entity<ColumnName>().ToTable("TableExcel");
         }
     }
 }
